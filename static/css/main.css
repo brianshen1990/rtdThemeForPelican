@@ -1,0 +1,123 @@
+/* Imports */
+@import url("reset.css");
+@import url("fonts.css");
+
+a {	
+	color:#2e81b7; 
+	text-decoration: none;
+}
+
+body {
+	background-color: #FCFCFC;
+}
+._header h1 {
+	font-family:BreeSerif-Regular;
+	font-size:26px;
+	color:#2e81b7;
+	text-align:left; 
+	line-height: 66px;
+	font-weight: normal;
+}
+
+._header {
+	top: 0px;
+	height: 66px;
+	background-color: #fff;
+	clear: both;
+	border-bottom:1px solid #eeeeee;
+}
+._header h1 {
+	width: 960px;
+	margin: auto;
+}
+._header ._github {
+	float: right;
+	font-family: Lato-Regular;
+	font-size: 18px;
+	color: #2e81b7;
+	text-align: right;
+}
+._content {
+	clear: both;
+	width: 960px;
+	margin: auto;
+	margin-top: 24px;
+}
+._content ._left {
+	width: 650px;
+	float: left;
+}
+._content ._right {
+	width: 285px;
+	float: right
+}
+
+._footer {
+	height: 88px;
+	background-color: #fff;
+	clear: both;
+	margin-top: 24px;
+	font-family: Lato-Regular;
+	font-size: 18px;
+	color: #2e81b7;
+	border-top:1px solid #eeeeee;
+}
+._footer > div {
+	width: 960px;
+	margin: auto;
+	bottom: 0px;
+}
+._footer > div p{
+	float: right;
+	line-height:88px;
+}
+
+._content ._postArticleList h3 {
+	font-family:Lato-Italic;
+	font-size:22px;
+	color:#2e81b7;
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+._content ._postArticleList h3 span{
+	color:#000;
+	font-family: Lato;
+	margin-right: 12px;
+}
+
+._content h2._breif {
+	font-family:BreeSerif-Regular;
+	font-size:24px;
+	color:#000000;
+	text-align:left;
+	margin-bottom: 24px;
+	font-weight: normal;
+}
+
+p.paginator  {
+	color:#000;
+	font-family: Lato;
+	font-size:18px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+._sideAboutme img {
+	width:36px;
+}
+._sideAboutme > p, ._sideAboutme > div {
+	margin-left: 24px;
+	font-family:Lato-Regular;
+	font-size:16px;
+	color:#000000;
+	text-align:left;
+	margin-bottom: 12px;
+}
+
+._sideAboutme > div > img { 
+	float:left;
+}
+._sideAboutme > div > p { 
+	line-height: 36px;
+	margin-left:48px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+  <link rel="icon" href="images/logo/logo.png" type="image/png" >
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+</head>
+
+<body class="home">
+  <header class="_header">
+    <h1>
+      <a href="{{ SITEURL }}/">
+        {{ SITENAME }}
+      </a>
+      {% if GITHUB_URL %}
+      <a href="{{ GITHUB_URL }}" class="_github">
+        GitHub
+      </a>
+      {% endif %}
+    </h1>
+  </header>
+  <div class="_content">
+    <div class="_left">
+      {% block content_left %}
+      {% endblock %}
+    </div>
+    <div class="_right">
+      {% block content_right %}
+      {% endblock %}
+    </div>
+  </div>
+  <footer class="_footer">
+    <div>
+      <p>Powered by <a href="http://getpelican.com/">Pelican</a></p>
+    </div>
+  </footer><!-- /#contentinfo -->
+
+  {% include 'analytics.html' %}
+</body>
+</html>

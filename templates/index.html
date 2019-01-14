@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+{% block content_title %}{% endblock %}
+{% block content_left %}
+{% if articles %}
+  <h2 class="_breif">Recent:</h2>
+  {% for article in articles_page.object_list %}
+    {% if loop.first %}
+    <section>
+      <ol class="_postArticleList" class="hfeed" start="{{ articles_paginator.per_page -1 }}">
+    {% endif %}
+      <li>
+        <article>
+          <h3>
+            <span>{{ article.date | strftime('%Y-%m-%d') }}</span>
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+              title="Permalink to {{ article.title|striptags }}">
+              {{ article.title }}
+            </a>
+          </h3>
+        </article>
+      </li>
+    {% if loop.last %}
+      {% if loop.length >= 1 or articles_page.has_other_pages() %}
+        </ol><!-- /#posts-list -->
+        {% if articles_page.has_other_pages() %}
+          {% include 'pagination.html' %}
+        {% endif %}
+        </section><!-- /#content -->
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+<section>
+  <h3>Pages</h3>
+  {% for page in pages %}
+    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</section>
+{% endif %}
+{% endblock content_left %}
+
+{% block content_right %}
+<div>
+  {% include '_aboutme.html' %}
+  {% include '_categories.html' %}
+</div>
+{% endblock content_right %}
