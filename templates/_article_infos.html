@@ -1,0 +1,43 @@
+<div class="_articleInfo">
+  <table>
+    <tr>
+      <td>Published:</td>
+      <td>{{ article.locale_date }}</td>
+    </tr>
+
+  {% if article.modified %}
+    <tr>
+      <td>Updated:</td>
+      <td>{{ article.locale_modified }}</td>
+    </tr>
+  {% endif %}
+
+  {% if article.authors %}
+    <tr>
+      <td>By:</td>
+      <td>
+        {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}"></a>{{ author }}</a>
+        {% endfor %}
+      </td>
+    </tr>
+  {% endif %}
+
+  <tr>
+    <td>Category:</td>
+    <td>{{ article.category }}</td>
+  </tr>
+
+  {% if article.tags %}
+    <tr>
+      <td>Tags:</td>
+      <td>
+        {% for tag in article.tags %}
+          <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> 
+        {% endfor %}
+      </td>
+    </tr>
+  {% endif %}
+
+  </table>
+</div>

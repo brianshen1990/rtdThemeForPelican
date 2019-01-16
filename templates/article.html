@@ -2,25 +2,17 @@
 {% block html_lang %}{{ article.lang }}{% endblock %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
 
-{% block extra_head %}
-{% import 'translations.html' as translations with context %}
-{% if translations.entry_hreflang(article) %}
-  {{ translations.entry_hreflang(article) }}
-{% endif %}
-{% endblock %}
-
 {% block content_left %}
-<section id="content" class="body">
+<section>
   <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-           title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-      {% include 'twitter.html' %}
-    </header>
+    <h1 class="_article_header">
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+          title="Permalink to {{ article.title|striptags }}">{{ article.title }}
+      </a>
+    </h1>
 
-    <div class="entry-content">
-      {% include 'article_infos.html' %}
+    <div class="_article">
+      {% include '_article_infos.html' %}
       {{ article.content }}
     </div><!-- /.entry-content -->
 
@@ -48,3 +40,10 @@
   </article>
 </section>
 {% endblock %}
+{% block content_right %}
+<div> 
+  {% include '_aboutme.html' %}
+  {% include '_categories.html' %}
+  {% include '_tags.html' %}
+</div>
+{% endblock content_right %}

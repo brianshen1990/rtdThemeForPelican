@@ -2,7 +2,11 @@
 {% block content_title %}{% endblock %}
 {% block content_left %}
 {% if articles %}
-  <h2 class="_breif">Recent:</h2>
+  <h2 class="_breif">
+    {% block content_h1 %}
+      Recent:
+    {% endblock %}
+  </h2>
   {% for article in articles_page.object_list %}
     {% if loop.first %}
     <section>
@@ -40,8 +44,9 @@
 {% endblock content_left %}
 
 {% block content_right %}
-<div>
+<div> 
   {% include '_aboutme.html' %}
   {% include '_categories.html' %}
+  {% include '_tags.html' %}
 </div>
 {% endblock content_right %}
