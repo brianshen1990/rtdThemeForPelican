@@ -14,6 +14,7 @@ AUTHOR_NAME = 'name'
 SELFIE_NOTE = 'Note'
 TOP_CATEGORY = 10
 TOP_TAG = 10
+SITENAME = 'KNOWN'
 
 JINJA_FILTERS = {
     'sort_by_article_count': partial(
@@ -24,3 +25,16 @@ JINJA_FILTERS = {
 ```
 
 We need to add a `Jinja` Filter because inline filter cannot support sort by attribute's length.
+
+Previews:
+    https://brianshen1990.github.io/
+
+Screenshots:
+
+![SC01](./ScreenShot01.png)
+
+![SC02](./ScreenShot02.png)
+
+![SC03](./ScreenShot03.png)
+
+
