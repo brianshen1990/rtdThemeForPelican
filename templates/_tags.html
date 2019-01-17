@@ -1,7 +1,7 @@
 <div class="_sideTags _sideBar">
   <h2 class="_breif">Tags</h2>
   <ol>
-    {% for tag, arts in (tags|sort_by_article_count)[:5] %}
+    {% for tag, arts in (tags|sort_by_article_count)[:TOP_TAG] %}
       <li>
         <a href="{{ SITEURL }}/{{ tag.url }}">{{tag}} </a><span>{{ arts|length }}</span>
       </li>
