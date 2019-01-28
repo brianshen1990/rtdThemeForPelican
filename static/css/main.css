@@ -212,7 +212,7 @@ h1._article_header a{
 	margin-left: 36px;
 }
 /* fix bug for pelican render*/
-._article li p.first {
+._article li > p.first {
 	display: inline-block;
 }
 
@@ -300,3 +300,49 @@ h1._article_header a{
 ._article table.docutils tbody>tr:last-child td {
 	border-bottom-width: 0
 }
+
+.error, .warning, .tip {
+	margin-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+.error > p, .warning > p, .tip > p{
+	line-height:23px;
+}
+.error > p, .warning > p, .tip > p,
+.error > div, .warning > div, .tip > div{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align:left;
+}
+
+.line-block {
+	margin-left: 24px;
+}
+
+p.admonition-title {
+	margin-top: 0px;
+	margin-bottom: 2px;
+	color: white;
+	font-size: bold;
+	padding: 5px 10px 5px 10px;
+}
+.error {
+	background: #fdf3f2
+}
+.error .admonition-title{
+	background: #f29f97
+}
+.warning {
+	background: #ffedcc
+}
+.warning .admonition-title{
+	background: #f0b37e
+}
+.tip {
+	background: #dbfaf4
+}
+.tip .admonition-title {
+	background: #1abc9c
+}
+
